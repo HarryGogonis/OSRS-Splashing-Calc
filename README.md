@@ -1,5 +1,7 @@
 # Splashing Calculator for Old School Runescape
 
+## [View the app](https://harrygogonis.github.io/OSRS-Splashing-Calc)
+
 A simple calculator to determine how many "splashes" you need for a desired mage level.
 Uses the [OSBuddy Exchange API](https://rsbuddy.com/exchange) to find rune prices.
 
