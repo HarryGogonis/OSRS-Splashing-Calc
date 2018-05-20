@@ -18,6 +18,7 @@ before_script:
 script: grunt
 
 deploy:
+  local-dir: dist/
   provider: pages
   skip-cleanup: true
   github-token:
