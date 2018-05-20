@@ -3,7 +3,8 @@ sudo: false
 language: node_js
 
 node_js:
-  - '0.12'
+  - "4"
+  - "node"
 
 before_install:
   - "export DISPLAY=:99.0"
@@ -14,6 +15,8 @@ before_install:
 before_script:
   - npm install -g bower
   - bower install
+
+script: grunt
 
 deploy:
   provider: pages
