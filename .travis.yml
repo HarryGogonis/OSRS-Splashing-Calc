@@ -3,7 +3,6 @@ sudo: false
 language: node_js
 
 node_js:
-  - "4"
   - "node"
 
 before_install:
@@ -25,7 +24,7 @@ deploy:
     secure: WNt7aT8E8I1fYj//xmsGEbFrCPE+qGgIbEAItqFtDiUBngbqNNUNWCL+B5GIEkKMPhZfZnr4Md68noBZPPCSnYAPQO7VvaMyjJ/aXC2wp18gUvdCd1M8ICLq49WE/6SCtWH3X0Z3hbQq2sZ/V6X5JjxktBLW59p/Z6PXeXzIgiBnQp6Rmw4c+FExB5/ve7/cEFPW7Ft48REY9rSyAept9lxfbUextUfL1aIPFdSQZ5RV1fsyv9QxoKaXMC3Igx3zj/hC9uDtuoQUZGllONdjGDp/gxb0jWa097ilpJshQN9eXQvBjAvV6d7KTO6lOswEAMXw7M5Auepp1Oi0ccifKh1NfRU4JzPplPW4c2ZxkR44hFK0liFHBuVC8LXg7gThSLmvFVwnIFwwNCDTlu1q2G1N/6EK55J+q58n1RMA0rnn/+9IrmILWiMoSUUOrg0wFVnpWpuM+4QXjriUUHeMAxMm8iE1g1FifTAghj6Cdr4tvhRHtasYc8KQ/HfleVmg6yTar2TyPrABghgbzTYz1zerziwjfmdNH3q8nbTk6WCMZO5WB6vZvRvF92Dp5Ad8qX7ik+dfIW8cOVTGgTaJuEXgpG9hUXj3Olcp0QOi8TGmz1nKO10R9SjKmXR6aSm6DAW0R/ygWsGvgiVPVtIgnLMhOB6UFQ9TCxjcODArYs8=
   keep-history: true
   on:
-    branch: gh-pages
+    branch: master
 
 cache:
   directories:
