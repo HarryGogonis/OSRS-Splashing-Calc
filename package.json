@@ -2,7 +2,8 @@
   "name": "osrssplashcalc",
   "private": true,
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "start": "grunt serve"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
