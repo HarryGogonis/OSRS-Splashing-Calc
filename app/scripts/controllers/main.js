@@ -10,8 +10,8 @@
 angular
   .module('osrssplashCalcApp')
   .controller('MainCtrl', function ($http, $scope) {
-    var HIGH_SCORE_API = 'https://cors-proxy.htmldriven.com/?url=http://services.runescape.com/m=hiscore_oldschool/index_lite.ws?player=';
-    var ge = 'https://api.rsbuddy.com/grandExchange?a=guidePrice&i=';
+    var HIGH_SCORE_API = 'https://cors-anywhere.herokuapp.com/http://services.runescape.com/m=hiscore_oldschool/index_lite.ws?player=';
+    var ge = 'https://cors-anywhere.herokuapp.com/http://services.runescape.com/m=itemdb_oldschool/api/catalogue/detail.json?item=';
     var splashesPerHour = 1200;
     var castXp = {
       mind: 11.5,
@@ -117,7 +117,7 @@ angular
       var url = HIGH_SCORE_API + $scope.player;
 
       $http.get(url).then(function (res) {
-        var highscores = res.data && res.data.body && res.data.body.split(',');
+        var highscores = res.data && res.data.split(',');
         if (!highscores || highscores.length < 17) {
           return;
         }
@@ -166,7 +166,7 @@ angular
     // OSBuddy API Requests
     $http.get(ge + '558').then(
       function (res) {
-        $scope.mind.gp = res.data.overall;
+        $scope.mind.gp = res.data.item.current.price;
       },
       function (res) {
         console.log(res);
@@ -174,7 +174,7 @@ angular
     );
     $http.get(ge + '562').then(
       function (res) {
-        $scope.chaos.gp = res.data.overall;
+        $scope.chaos.gp = res.data.item.current.price;
       },
       function (res) {
         console.log(res);
@@ -182,7 +182,7 @@ angular
     );
     $http.get(ge + '560').then(
       function (res) {
-        $scope.death.gp = res.data.overall;
+        $scope.death.gp = res.data.item.current.price;
       },
       function (res) {
         console.log(res);
@@ -190,7 +190,7 @@ angular
     );
     $http.get(ge + '565').then(
       function (res) {
-        $scope.blood.gp = res.data.overall;
+        $scope.blood.gp = res.data.item.current.price;
       },
       function (res) {
         console.log(res);
